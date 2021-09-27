@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save my-hooks
+npm install --save @cyhfe/my-hooks
 ```
 
 ## Usage
