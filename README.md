@@ -15,7 +15,7 @@ npm install --save my-hooks
 ```tsx
 import React from "react";
 
-import { useBoolean } from "my-hooks";
+import { useBoolean } from "@cyhfe/my-hooks";
 
 const Example = () => {
   const [open, { toggle }] = useBoolean(true);
