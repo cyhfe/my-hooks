@@ -2,7 +2,7 @@
 
 >
 
-[![NPM](https://img.shields.io/npm/v/my-hooks.svg)](https://www.npmjs.com/package/@cyhfe/my-hooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@cyhfe/my-hooks.svg)](https://www.npmjs.com/package/@cyhfe/my-hooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
@@ -15,7 +15,7 @@ npm install --save my-hooks
 ```tsx
 import React from "react";
 
-import { useBoolean } from "my-hooks";
+import { useBoolean } from "@cyhfe/my-hooks";
 
 const Example = () => {
   const [open, { toggle }] = useBoolean(true);
