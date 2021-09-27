@@ -1,8 +1,8 @@
 # my-hooks
 
-> 
+>
 
-[![NPM](https://img.shields.io/npm/v/my-hooks.svg)](https://www.npmjs.com/package/my-hooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/my-hooks.svg)](https://www.npmjs.com/package/@cyhfe/my-hooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
@@ -13,18 +13,19 @@ npm install --save my-hooks
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import React from "react";
 
-import { useMyHook } from 'my-hooks'
+import { useBoolean } from "my-hooks";
 
 const Example = () => {
-  const example = useMyHook()
+  const [open, { toggle }] = useBoolean(true);
   return (
     <div>
-      {example}
+      <button>toggle</button>
+      {open ? "open" : "closed"}
     </div>
-  )
-}
+  );
+};
 ```
 
 ## License
