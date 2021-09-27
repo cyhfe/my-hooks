@@ -21,7 +21,7 @@ const Example = () => {
   const [open, { toggle }] = useBoolean(true);
   return (
     <div>
-      <button>toggle</button>
+      <button onClick={toggle}>toggle</button>
       {open ? "open" : "closed"}
     </div>
   );

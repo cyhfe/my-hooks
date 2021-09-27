@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import { useMyHook } from 'my-hooks'
+import UseBoolean from "./components/useBoolean";
 
 const App = () => {
-  const example = useMyHook()
   return (
     <div>
-      {example}
+      <UseBoolean />
     </div>
-  )
-}
-export default App
+  );
+};
+
+export default App;
