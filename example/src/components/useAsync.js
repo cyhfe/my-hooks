@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-// import { useBoolean } from "my-hooks";
+import { useAsync } from "my-hooks";
 
 const request = (state) => {
   return new Promise((resolve, reject) => {
@@ -15,38 +15,21 @@ const request = (state) => {
 const UseAsync = () => {
   const [state, setState] = useState(true);
 
-  const [data, setData] = useState(null);
-  const [status, setStatus] = useState("idle");
-  const [error, setError] = useState(null);
+  const { isLoading, data, error, run } = useAsync();
+
   useEffect(() => {
-    setStatus("loading");
-    request(state).then(
-      (data) => {
-        setData(data);
-        setStatus("success");
-      },
-      (err) => {
-        setError(err);
-        setStatus("error");
-      }
-    );
-  }, [state]);
+    run(request(state));
+  }, [state, run]);
 
   const renderContent = () => {
-    if (status === "idle") {
-      return <div>idle</div>;
-    }
-    if (status === "loading") {
+    if (isLoading) {
       return <div>loading...</div>;
     }
-    if (status === "error") {
-      return <div>{error}</div>;
+    if (error) {
+      return <div>{JSON.stringify(error)}</div>;
     }
-    if (status === "success") {
-      return <div>{data}</div>;
-    }
+    if (data) return <div>{JSON.stringify(data)}</div>;
   };
-
   return (
     <div>
       <button onClick={() => setState(true)}>loadSuccess</button>
@@ -56,4 +39,15 @@ const UseAsync = () => {
   );
 };
 
-export default UseAsync;
+const Demo = () => {
+  const [show, setShow] = useState(true);
+  if (!show) return <div>unmount</div>;
+  return (
+    <div>
+      <button onClick={() => setShow(false)}>unmount</button>
+      <UseAsync />
+    </div>
+  );
+};
+
+export default Demo;
