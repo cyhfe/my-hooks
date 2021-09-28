@@ -1,17 +1,26 @@
 import { useCallback, useState } from "react";
 
-export default function useBoolean(initialValue: boolean) {
-  const [value, setValue] = useState(initialValue)
+type Actions = {
+  toggle: (value: boolean) => void;
+  setTrue: () => void;
+  setFalse: () => void;
+};
 
-  const toggle = useCallback(() => setValue(v => !v), [setValue])
-  const setTrue = useCallback(() => setValue(false), [setValue])
-  const setFalse = useCallback(() => setValue(true), [setValue])
+export default function useBoolean(
+  initialValue: boolean
+): [boolean, Actions] {
+  const [value, setValue] = useState(initialValue);
 
-  const actions = {
+  // React guarantees that dispatch function identity(here is setValue) is stable and won’t change on re-renders.
+  const toggle = useCallback(() => setValue((v) => !v), [setValue]);
+  const setTrue = useCallback(() => setValue(false), [setValue]);
+  const setFalse = useCallback(() => setValue(true), [setValue]);
+
+  const actions: Actions = {
     toggle,
     setTrue,
-    setFalse
-  }
+    setFalse,
+  };
 
-  return [value, actions]
+  return [value, actions];
 }
