@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/my-hooks/static/css/main.2c6a48fe.chunk.css",
+    "main.js": "/my-hooks/static/js/main.46f01ecd.chunk.js",
+    "main.js.map": "/my-hooks/static/js/main.46f01ecd.chunk.js.map",
+    "runtime-main.js": "/my-hooks/static/js/runtime-main.46881f9c.js",
+    "runtime-main.js.map": "/my-hooks/static/js/runtime-main.46881f9c.js.map",
+    "static/js/2.9ccd488e.chunk.js": "/my-hooks/static/js/2.9ccd488e.chunk.js",
+    "static/js/2.9ccd488e.chunk.js.map": "/my-hooks/static/js/2.9ccd488e.chunk.js.map",
+    "index.html": "/my-hooks/index.html",
+    "precache-manifest.e5f9034a589aa2875120e38999ddb6b2.js": "/my-hooks/precache-manifest.e5f9034a589aa2875120e38999ddb6b2.js",
+    "service-worker.js": "/my-hooks/service-worker.js",
+    "static/css/main.2c6a48fe.chunk.css.map": "/my-hooks/static/css/main.2c6a48fe.chunk.css.map",
+    "static/js/2.9ccd488e.chunk.js.LICENSE.txt": "/my-hooks/static/js/2.9ccd488e.chunk.js.LICENSE.txt",
+    "static/js/main.46f01ecd.chunk.js.LICENSE.txt": "/my-hooks/static/js/main.46f01ecd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.46881f9c.js",
+    "static/js/2.9ccd488e.chunk.js",
+    "static/css/main.2c6a48fe.chunk.css",
+    "static/js/main.46f01ecd.chunk.js"
+  ]
+}
